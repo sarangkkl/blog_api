@@ -8,13 +8,13 @@ from core.utls import response_structure
 from django.core.paginator import Paginator
 from django.contrib.auth.models import User
 
+from rest_framework.generics import RetrieveUpdateDestroyAPIView
 
 
 # Create your views here.
 
 class PostView(APIView):
     permission_classes = [IsOwnerOrReadOnly]
-
     def get(self, request,pk=None):
         """
             This method is used to get all the posts or a single post
@@ -65,8 +65,13 @@ class PostView(APIView):
         return Response(response_structure(serializer.data, 201, 'Post created successfully', False))
     
     def put(self, request, pk):
+        
         try:
             saved_post = Post.objects.get(pk=pk)
+            try:
+                self.check_object_permissions(request, saved_post)
+            except:
+                return Response(response_structure(None, 401, 'Unauthorized', True))
             data = request.data
             serializer = PostSerializer(instance=saved_post, data=data, partial=True)
             if serializer.is_valid(raise_exception=True):
@@ -78,6 +83,10 @@ class PostView(APIView):
     def delete(self, request, pk):
         try:
             post = Post.objects.get(pk=pk)
+            try:
+                self.check_object_permissions(request, post)
+            except:
+                return Response(response_structure(None, 401, 'Unauthorized', True))
             post.delete()
             return Response(response_structure(None, 204, 'Post deleted successfully', False))
         except:
