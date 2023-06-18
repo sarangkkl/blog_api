@@ -1,0 +1,748 @@
+{
+	"info": {
+		"_postman_id": "4e29d392-da04-425d-8d4d-2c7e4b000dc1",
+		"name": "blogs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17012881",
+		"_collection_link": "https://red-meteor-364016.postman.co/workspace/62de5c46-46f9-4d30-8dc5-45dea721c6ed/collection/17012881-4e29d392-da04-425d-8d4d-2c7e4b000dc1?action=share&creator=17012881&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "GetPost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}posts?author=sarang&post_per_page=2",
+							"host": [
+								"{{base_url}}posts"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "",
+									"description": "Search by title of the post",
+									"disabled": true
+								},
+								{
+									"key": "body",
+									"value": "",
+									"description": "search by body",
+									"disabled": true
+								},
+								{
+									"key": "author",
+									"value": "sarang",
+									"description": "search by author name"
+								},
+								{
+									"key": "post_per_page",
+									"value": "2",
+									"description": "int total number pos you want in the response"
+								},
+								{
+									"key": "page_number",
+									"value": "5",
+									"description": "int page number",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetPostExample",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}posts",
+									"host": [
+										"{{base_url}}posts"
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": "",
+											"description": "Search by title of the post",
+											"disabled": true
+										},
+										{
+											"key": "body",
+											"value": "",
+											"description": "search by body",
+											"disabled": true
+										},
+										{
+											"key": "author",
+											"value": "",
+											"description": "search by author name",
+											"disabled": true
+										},
+										{
+											"key": "post_per_page",
+											"value": "",
+											"description": "int total number pos you want in the response",
+											"disabled": true
+										},
+										{
+											"key": "page_number",
+											"value": "",
+											"description": "int page number",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 18 Jun 2023 06:13:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, PUT, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "963"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 3,\n            \"author\": {\n                \"username\": \"sarang\"\n            },\n            \"title\": \"This is post 2\",\n            \"body\": \"This is body\"\n        },\n        {\n            \"id\": 4,\n            \"author\": {\n                \"username\": \"sarang\"\n            },\n            \"title\": \"This is post 3\",\n            \"body\": \"This is body three\"\n        },\n        {\n            \"id\": 5,\n            \"author\": {\n                \"username\": \"sarang\"\n            },\n            \"title\": \"This is post 3\",\n            \"body\": \"This is body three\"\n        },\n        {\n            \"id\": 6,\n            \"author\": {\n                \"username\": \"sarang\"\n            },\n            \"title\": \"This is post 2\",\n            \"body\": \"This is body\"\n        },\n        {\n            \"id\": 7,\n            \"author\": {\n                \"username\": \"sarang\"\n            },\n            \"title\": \"This is post 2\",\n            \"body\": \"This is body\"\n        },\n        {\n            \"id\": 8,\n            \"author\": {\n                \"username\": \"sarang\"\n            },\n            \"title\": \"This is post 2\",\n            \"body\": \"This is body\"\n        },\n        {\n            \"id\": 9,\n            \"author\": {\n                \"username\": \"sarang\"\n            },\n            \"title\": \"This is post 2\",\n            \"body\": \"This is body\"\n        },\n        {\n            \"id\": 10,\n            \"author\": {\n                \"username\": \"sarang\"\n            },\n            \"title\": \"This is post 2\",\n            \"body\": \"This is body\"\n        },\n        {\n            \"id\": 11,\n            \"author\": {\n                \"username\": \"sarang\"\n            },\n            \"title\": \"This is post 2\",\n            \"body\": \"This is body\"\n        },\n        {\n            \"id\": 12,\n            \"author\": {\n                \"username\": \"sarang\"\n            },\n            \"title\": \"This is post 2\",\n            \"body\": \"This is body\"\n        }\n    ],\n    \"status\": 200,\n    \"message\": \"Posts retrieved successfully\",\n    \"error\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Single Post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}posts/4",
+							"host": [
+								"{{base_url}}posts"
+							],
+							"path": [
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Single Post",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}posts/4",
+									"host": [
+										"{{base_url}}posts"
+									],
+									"path": [
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 18 Jun 2023 06:24:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, PUT, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "168"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 4,\n        \"author\": {\n            \"username\": \"sarang\"\n        },\n        \"title\": \"This is post 3\",\n        \"body\": \"This is body three\"\n    },\n    \"status\": 200,\n    \"message\": \"Post retrieved successfully\",\n    \"error\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"New title\",\n    \"body\":\"i am tst body\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}posts",
+							"host": [
+								"{{base_url}}posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"New title\",\n    \"body\":\"i am tst body\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}posts",
+									"host": [
+										"{{base_url}}posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 18 Jun 2023 06:37:06 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, PUT, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "157"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 13,\n        \"author\": {\n            \"username\": \"sarang\"\n        },\n        \"title\": \"New title\",\n        \"body\": \"i am tst body\"\n    },\n    \"status\": 201,\n    \"message\": \"Post created successfully\",\n    \"error\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "update Post",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"New title updated\",\n    \"body\":\"i am tst body updated\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}posts/3",
+							"host": [
+								"{{base_url}}posts"
+							],
+							"path": [
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update post response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"New title updated\",\n    \"body\":\"i am tst body updated\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}posts/5",
+									"host": [
+										"{{base_url}}posts"
+									],
+									"path": [
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 18 Jun 2023 06:39:34 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, PUT, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "172"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 5,\n        \"author\": {\n            \"username\": \"sarang\"\n        },\n        \"title\": \"New title updated\",\n        \"body\": \"i am tst body updated\"\n    },\n    \"status\": 200,\n    \"message\": \"Post updated successfully\",\n    \"error\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "delete post",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"description": "Token can be obtain via login",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}posts/5",
+							"host": [
+								"{{base_url}}posts"
+							],
+							"path": [
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete post",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"description": "Token can be obtain via login",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}posts/5",
+									"host": [
+										"{{base_url}}posts"
+									],
+									"path": [
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 18 Jun 2023 06:43:14 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, PUT, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "78"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"status\": 204,\n    \"message\": \"Post deleted successfully\",\n    \"error\": false\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "accounts",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"sarang\",\n    \"password\":\"Pass1234@\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}accounts/login",
+							"host": [
+								"{{base_url}}accounts"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\":\"sarang\",\n    \"password\":\"Pass1234@\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}accounts/login",
+									"host": [
+										"{{base_url}}accounts"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 18 Jun 2023 14:53:19 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "379"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"username\": \"sarang\",\n        \"email\": \"sarangkkl2@gmail.com\",\n        \"is_staff\": true,\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg5NjkxOTk5LCJpYXQiOjE2ODcwOTk5OTksImp0aSI6ImI3ZjUzMzRjMTAyYzQzN2FiZmQ2Y2VlM2Q3ZWYyN2M3IiwidXNlcl9pZCI6MX0.KZn_DUyNLFDd3yqRrIKT4LZZ4rOAulQnNTa1p4DvMHE\"\n    },\n    \"status\": 200,\n    \"message\": \"Login Successful\",\n    \"error\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "Resiter",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"gaurav\",\n    \"password\":\"Pass1234@\",\n    \"email\":\"sahgaurav832@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}accounts/register",
+							"host": [
+								"{{base_url}}accounts"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\":\"gaurav\",\n    \"password\":\"Pass1234@\",\n    \"email\":\"sahgaurav832@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}accounts/register",
+									"host": [
+										"{{base_url}}accounts"
+									],
+									"path": [
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 18 Jun 2023 08:05:36 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "391"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"username\": \"gaurav\",\n        \"email\": \"sahgaurav832@gmail.com\",\n        \"is_staff\": false,\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg5NjY3NTM2LCJpYXQiOjE2ODcwNzU1MzYsImp0aSI6ImY3ZjA2OGRkNjMzZjRlZGY4ZjVjYjA0NTE5YWJjMzJiIiwidXNlcl9pZCI6Mn0.uR2mVeCqpRrMcDDa3lvTH_KThvk3xQ_bbaZxkK3GhNQ\"\n    },\n    \"status\": 201,\n    \"message\": \"User created successfully\",\n    \"error\": false\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
