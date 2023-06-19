@@ -6,6 +6,7 @@ from core.utls import response_structure
 from django.core.paginator import Paginator
 from django.contrib.auth.models import User
 from rest_framework.generics import RetrieveUpdateDestroyAPIView,ListCreateAPIView
+from rest_framework import status
 
 
 
@@ -19,19 +20,19 @@ class PostUpdateViewDestroy(RetrieveUpdateDestroyAPIView):
     def get(self, request, *args, **kwargs):
         instance = self.get_object()
         serializer = PostSerializer(instance)
-        return Response(response_structure(serializer.data, 200, 'Post retrieved successfully', False))
+        return Response(response_structure(serializer.data, status.HTTP_200_OK, 'Post retrieved successfully', False))
 
     def update(self, request, *args, **kwargs):
         instance = self.get_object()
         serializer = PostSerializer(instance, data=request.data, partial=True)
         serializer.is_valid(raise_exception=True)
         self.perform_update(serializer)
-        return Response(response_structure(serializer.data, 200, 'Post updated successfully', False))
+        return Response(response_structure(serializer.data, status.HTTP_200_OK, 'Post updated successfully', False))
 
     def destroy(self, request, *args, **kwargs):
         instance = self.get_object()
         self.perform_destroy(instance)
-        return Response(response_structure(None, 200, 'Post deleted successfully', False))
+        return Response(response_structure(None, status.HTTP_204_NO_CONTENT, 'Post deleted successfully', False))
     
 
 class ListCreateAPIView(ListCreateAPIView):
