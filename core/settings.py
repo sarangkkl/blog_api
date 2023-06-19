@@ -63,6 +63,9 @@ REST_FRAMEWORK = {
         'anon': '100/sec',
         'user': '1000/day'
     },
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ]
    
 
 }
