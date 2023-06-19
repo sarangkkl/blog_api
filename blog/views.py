@@ -1,14 +1,10 @@
 from .models import Post
 from .serializers import PostSerializer 
-from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
 from .permissions import IsOwnerOrReadOnly
 from core.utls import response_structure
 from django.core.paginator import Paginator
 from django.contrib.auth.models import User
-from django_filters import rest_framework as filters
-from .filters import PostFilter
 from rest_framework.generics import RetrieveUpdateDestroyAPIView,ListCreateAPIView
 
 
